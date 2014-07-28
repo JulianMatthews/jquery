@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<param name="flv" value="THE AVENGERS 2- Age Of Ultron Teaser Trailer - 2015 Official Marvel [HD].flv" />
+	<param name="width" value="500" />
+	<param name="height" value="360" />
+	<param name="autoplay" value="0" />
+	<param name="autoload" value="0" />
+	<param name="buffer" value="5" />
+	<param name="buffermessage" value="" />
+	<param name="buffercolor" value="ffffff" />
+	<param name="bufferbgcolor" value="858686" />
+	<param name="buffershowbg" value="0" />
+	<param name="title" value="THE AVENGERS 2- Age Of Ultron Teaser Trailer - 2015 Official Marvel [HD]" />
+	<param name="titlesize" value="20" />
+	<param name="titlecolor" value="ffffff" />
+	<param name="margin" value="0" />
+	<param name="srt" value="0" />
+	<param name="srtcolor" value="ffffff" />
+	<param name="srtbgcolor" value="858686" />
+	<param name="srtsize" value="11" />
+	<param name="showstop" value="1" />
+	<param name="showvolume" value="1" />
+	<param name="showtime" value="1" />
+	<param name="showplayer" value="autohide" />
+	<param name="showloading" value="autohide" />
+	<param name="showfullscreen" value="1" />
+	<param name="showswitchsubtitles" value="0" />
+	<param name="showmouse" value="autohide" />
+	<param name="loop" value="0" />
+	<param name="startimage" value="start_frame.jpg" />
+	<param name="playercolor" value="858686" />
+	<param name="loadingcolor" value="dddddd" />
+	<param name="bgcolor" value="ffffff" />
+	<param name="bgcolor1" value="ffffff" />
+	<param name="bgcolor2" value="ffffff" />
+	<param name="buttoncolor" value="ffffff" />
+	<param name="buttonovercolor" value="c3c4c4" />
+	<param name="slidercolor1" value="ffffff" />
+	<param name="slidercolor2" value="cccccc" />
+	<param name="sliderovercolor" value="c3c4c4" />
+	<param name="loadonstop" value="0" />
+	<param name="onclick" value="playpause" />
+	<param name="onclicktarget" value="_blank" />
+	<param name="ondoubleclick" value="fullscreen" />
+	<param name="ondoubleclicktarget" value="_blank" />
+	<param name="playertimeout" value="1500" />
+	<param name="videobgcolor" value="000000" />
+	<param name="volume" value="100" />
+	<param name="shortcut" value="1" />
+	<param name="playeralpha" value="100" />
+	<param name="srturl" value="video.srt" />
+	<param name="top1" value="0" />
+	<param name="showiconplay" value="1" />
+	<param name="iconplaycolor" value="ffffff" />
+	<param name="iconplaybgcolor" value="dddddd" />
+	<param name="iconplaybgalpha" value="25" />
+	<param name="showtitleandstartimage" value="0" />
+</config>

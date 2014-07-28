@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Intro Part 3</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                /*  padding: 10%;  */
+                margin-left: 10%;
+                margin-right: 10%;
+                background-image:url("images/homepage_cci_repeat_2_0.jpg");
+                background-repeat: repeat; 
+                
+            }
+            header {
+                font-size: 40px;
+                height: 100px;    
+            } 
+            .headSet {
+                padding: 0px;
+                background-color: #333333;
+                border: 10px solid crimson;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                width: 90%;
+            }
+            .navSet {
+                border-top: none;
+                text-align: center;
+                
+            }
+            .menuItem  {
+                background-color:  #333333;
+                color: whitesmoke;
+                font-family: cursive;
+                font-size: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin: 0 auto;
+                text-align: center;
+                text-decoration: none;
+            }
+            img {
+                float: right;
+            }
+            #content {
+                width: 89%;
+                background-color: #e1eeee;
+                padding: 15px;
+                margin-left: 1%;
+                //margin: 0px;
+                height: 1100px;
+            }
+            #headerText {
+                font-family: cursive;
+                height: 100px;
+                padding-top: 10px;
+
+            }
+            aside{
+                width:250px;
+                height: 600px;
+                border: 1px solid #ccccff;
+                background-color: #9999ff;
+                border-radius: 6px;
+                }
+            //slider
+            #photos {   
+                       position: relative;   
+                       width:350px;
+                                    height: 600px;
+                                    border: 1px solid #ccccff;
+                                    background-color: #9999ff;
+                                    border-radius: 6px; 
+                       -webkit-box-shadow: 0 6px 6px -6px grey;  
+                       -moz-box-shadow: 0 6px 6px -6px grey;  
+                       box-shadow: 0 6px 6px -6px grey;  
+                    }  
+
+                    #photos img {   
+                        width:350px;
+                                    height: 600px;
+                       position: absolute;   
+                    // top: 10px;   
+                      margin-left: -100px;   
+                    }  
+                    .comic{
+                        position: absolute;
+                        margin-left: -14px;
+                        margin-top: 10px;
+                    }
+                    footer{
+                        color: whitesmoke;
+                        text-align: center;
+                    }
+                   
+        </style>
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                //Part 2
+                // Modify any DOM element
+                $('#headerText').html('CHANGED');
+                $('#headerText').css('color', 'red');
+                $('aside').css('float', 'right');
+                $('p').css('font-weight', 'bold');
+                 $('.more').html('alot of text to go here');
+              //  $('aside').
+                //Part 1
+                //Find any DOM element 
+                var avar = $('body').find('footer');
+                console.log("avar has the value " + avar.text());
+     //         to see it in action uncomment the following line           
+     //           $('#headerText').html(avar.text());
+                //Part 3
+                // We can add elemets that was not there before
+                //$("article").append("<ol><li>Milk</li><li>Eggs</li>\n\
+                  //                      <li>Bread</li></ol>");
+                //Part 3
+                // We can respond  user interaction on any element
+                $("footer").click(function() {
+                    //And then change any html element
+                    $('#headerText').html(avar.text());
+                });
+                
+                $(".menuItem").mouseenter(function(){
+                    $(this).css('color', 'black');
+                });
+                $(".menuItem").mouseleave(function(){
+                    $(this).css('color', 'white');
+                });
+                $(".menuItem").click(function(){
+                   // alert("Go to " + $(this).text());
+                   var fileName = $(this).text() + ".html";
+                    window.open(fileName);
+                });
+
+                //Part 5
+                // We can call external services
+                //Part 6
+                // Simplify common JavaScript tasks
+                $('footer').addClass('headSet');
+            });
+            
+            
+            
+                //$("#gallery_menu").hover(function(){$("#gallery_menu").animate({fontSize:'3em'},"slow");});
+    $("headset").hover(function(){$("headset").animate({size:'3em'},"slow");});
+    $(document).ready(function() {  
+    //hide all the images except the first one     
+    $("#photos img:gt(0)").hide();  
+  
+    setInterval(function() {  
+        //get the current image - it is the visible one  
+        var current = $('#photos img:visible');  
+  
+        //get immediate next image after the current if exists, otherwise find the first one  
+        var next = current.next().length ? current.next() : $('#photos img:eq(0)');  
+        //hide the current image  
+        current.fadeOut(2000);  
+        //show the next one  
+        next.fadeIn(2000);  
+    }, 3000);  
+});  
+
+
+        </script>
+    </head>
+    <body>  
+        <header class='headSet'> 
+            <!-- Even though it seems straight forward at first
+            to place  an the text of the header next the image of the header
+            -->
+            <!--<span id="headerText">This is header</span>-->
+            <!-- Even though we style the size of the image in HTML we 
+            still resize an actual copy of the file.
+            Why? -->
+            <img src="images/Comic-Con-SA-600x337.jpg" width="974" height="350" 
+                 alt="header"/>           
+            <div style="clear: right"> </div>
+        </header>
+        <nav class='headSet navSet'>
+            <!--<span class="menuItem" ><a href="index.html">Home</a></span>
+            <span class="menuItem" ><a href="About.html">About</a></span>
+            <span class="menuItem" ><a href="Gallery.html">Gallery</a></span>
+            <span class="menuItem" ><a href="Contact.html">Contact</a></span>-->
+            <span class="menuItem" id='home_menu'>Home</span>
+            <span class="menuItem"> About</span>
+            <span class="menuItem" id='gallery_menu'>Gallery</span>
+            <span class="menuItem">Contact</span>
+        </nav>
+        <div id='content'>
+            <aside>
+            
+                        <div class="gallery">
+
+                            <div id="photos">
+                            <img  src="images/sn.png">
+                            <img  src="images/shoe.jpg">
+                            <img  src="images/shoe(2).jpg">
+                            <img  src="images/shoe(3).jpg">
+                            <img  src="images/shoe(4).jpg">
+                            <img  src="images/shoe(5).jpg">
+                            <img  src="images/shoe(6).jpg">
+                            <img  src="images/shoe(7).jpg">
+                            <img  src="images/shoe(8).jpg">
+                            <img  src="images/shoe(9).jpg">
+                            <img  src="images/shoe(10).jpg">
+                            <img  src="images/shoe(11).png">
+                            <img  src="images/shoe(12).jpg">
+                            <img  src="images/shoe(13).jpg">
+                            <img  src="images/shoe(1).jpg">
+                            </div>
+                                
+                </div>
+                <p class="more">Side bar for <br/>
+                    Adverts
+                </p>
+            </aside>
+            <article>
+                <object id="Object1" type="application/x-shockwave-flash" data="player_flv_maxi.swf" width="500" height="360"> 
+<noscript><a href="http://www.dvdvideosoft.com">freeware</a></noscript> 
+<param name="movie" value="player_flv_maxi.swf" /> 
+<param name="allowFullScreen" value="true" /> 
+<param name="wmode" value="opaque" /> 
+
+<param name="allowScriptAccess" value="sameDomain" /> 
+<param name="quality" value="high" /> 
+<param name="menu" value="true" /> 
+<param name="autoplay" value="false" /> 
+<param name="autoload" value="false" /> 
+<param name="FlashVars" value="configxml=THE AVENGERS 2- Age Of Ultron Teaser Trailer - 2015 Official Marvel [HD].xml" /> 
+</object> <p> After the 2012 mega-blockbuster The Avengers, you have to wonder how Marvel</br>
+    Studios will manage to top the superhero epic with the eagerly-anticipated 2015 sequel</br>
+    The Avengers: Age of Ultron, but it seems that writer-director Joss Whedon is set to</br>
+    turn things up to eleven - at least, according to the God of Thunder himself, Chris</br> Hemsworth.</br></br>
+
+"Everything in [Age of Ultron] is ramped up," said the Thor star during a Q&A at the</br> 
+Wizard World Comic Con (via CBM). It kind of blew me away reading [the script]. I don't</br>
+know how Joss does it, but everyone has gone up another notch and the whole thing</br>
+is bigger and more exciting and crazier. Yeah, he's a genius... I'm really excited to</br>
+start Avengers 2 in 2 months and get back on set. We're going to meet in London and</br>
+shoot there for 3 months, so I'm excited to get back together with everyone and catch up." </p></article>
+            <article><p class="comic"><img src="images/comic.jpg"></p></article>
+        </div>
+        <footer >Copyright of Julian Matthews 2014</footer>
+</div>
+    </body>
+</html>
